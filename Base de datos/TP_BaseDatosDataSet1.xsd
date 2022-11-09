@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TP_BaseDatosDataSet1" targetNamespace="http://tempuri.org/TP_BaseDatosDataSet1.xsd" xmlns:mstns="http://tempuri.org/TP_BaseDatosDataSet1.xsd" xmlns="http://tempuri.org/TP_BaseDatosDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TP_BaseDatosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TP_BaseDatosConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Base_de_datos.Properties.Settings.GlobalReference.Default.TP_BaseDatosConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EntrenamientosTableAdapter" GeneratorDataComponentClassName="EntrenamientosTableAdapter" Name="Entrenamientos" UserDataComponentName="EntrenamientosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TP_BaseDatosConnectionString (Settings)" DbObjectName="TP_BaseDatos.dbo.Entrenamientos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Fecha_entren, Hora_entren, Nombre_Deportista, Nombre_Entrenador FROM dbo.Entrenamientos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Fecha_entren" DataSetColumn="Fecha_entren" />
+              <Mapping SourceColumn="Hora_entren" DataSetColumn="Hora_entren" />
+              <Mapping SourceColumn="Nombre_Deportista" DataSetColumn="Nombre_Deportista" />
+              <Mapping SourceColumn="Nombre_Entrenador" DataSetColumn="Nombre_Entrenador" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TP_BaseDatosDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="TP_BaseDatosDataSet1" msprop:Generator_DataSetName="TP_BaseDatosDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Entrenamientos" msprop:Generator_RowEvHandlerName="EntrenamientosRowChangeEventHandler" msprop:Generator_RowDeletedName="EntrenamientosRowDeleted" msprop:Generator_RowDeletingName="EntrenamientosRowDeleting" msprop:Generator_RowEvArgName="EntrenamientosRowChangeEvent" msprop:Generator_TablePropName="Entrenamientos" msprop:Generator_RowChangedName="EntrenamientosRowChanged" msprop:Generator_RowChangingName="EntrenamientosRowChanging" msprop:Generator_TableClassName="EntrenamientosDataTable" msprop:Generator_RowClassName="EntrenamientosRow" msprop:Generator_TableVarName="tableEntrenamientos" msprop:Generator_UserTableName="Entrenamientos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Fecha_entren" msprop:Generator_ColumnPropNameInRow="Fecha_entren" msprop:Generator_ColumnPropNameInTable="Fecha_entrenColumn" msprop:Generator_ColumnVarNameInTable="columnFecha_entren" msprop:Generator_UserColumnName="Fecha_entren" type="xs:dateTime" />
+              <xs:element name="Hora_entren" msprop:Generator_ColumnPropNameInRow="Hora_entren" msprop:Generator_ColumnPropNameInTable="Hora_entrenColumn" msprop:Generator_ColumnVarNameInTable="columnHora_entren" msprop:Generator_UserColumnName="Hora_entren" type="xs:duration" />
+              <xs:element name="Nombre_Deportista" msprop:Generator_ColumnPropNameInRow="Nombre_Deportista" msprop:Generator_ColumnPropNameInTable="Nombre_DeportistaColumn" msprop:Generator_ColumnVarNameInTable="columnNombre_Deportista" msprop:Generator_UserColumnName="Nombre_Deportista">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre_Entrenador" msprop:Generator_ColumnPropNameInRow="Nombre_Entrenador" msprop:Generator_ColumnPropNameInTable="Nombre_EntrenadorColumn" msprop:Generator_ColumnVarNameInTable="columnNombre_Entrenador" msprop:Generator_UserColumnName="Nombre_Entrenador">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
